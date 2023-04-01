@@ -7,6 +7,7 @@ const mongoose = require("mongoose")
 
 // const mongoose = require('./db.js')
 
+const routes = require('./routes.js')
 
 const port = process.env.PORT
 
@@ -25,3 +26,5 @@ app.listen(PORT, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", PORT);
     });
+
+    app.use('/employee',routes);
